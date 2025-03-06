@@ -1,43 +1,89 @@
+/* Reset de margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f4f6;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f4;
+    color: #333;
 }
 
+/* Container do formulário */
 .container {
-    background: white;
-    padding: 20px;
+    background-color: #fff;
+    padding: 30px 40px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
     text-align: center;
 }
 
-input {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+/* Título */
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #4CAF50;
 }
 
+/* Campos de input */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+
+input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Botão */
 button {
-    background-color: #28a745;
-    color: white;
-    padding: 10px 15px;
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: #fff;
     border: none;
     border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: #45a049;
 }
 
+/* Mensagens */
 p {
-    margin-top: 10px;
+    margin-top: 20px;
+    font-size: 16px;
     font-weight: bold;
+}
+
+p#mensagem {
+    color: red;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+    h2 {
+        font-size: 20px;
+    }
 }
